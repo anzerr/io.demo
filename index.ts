@@ -9,6 +9,7 @@ import {TotpPage} from '@demo/totp';
 window.addEventListener('load', () => {
 	let page = window.location.href.split('#')[1];
 	if (page === 'totp') {
+		document.title = 'Totp.util';
 		ReactDOM.render(React.createElement(TotpPage, null), document.getElementById('root'));
 	}
 });
