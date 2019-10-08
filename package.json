@@ -1,0 +1,48 @@
+{
+	"name": "io.demo",
+	"version": "1.0.3",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "npm run pack",
+		"pack": "npx webpack --config webpack.config.js",
+		"watch": "webpack --watch",
+		"clean": "find ./src -regex \".*.(js|map|d.ts)\" -type f -delete && rm -Rf ./dist"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^12.7.2",
+		"file-loader": "^4.2.0",
+		"css-loader": "^3.2.0",
+		"style-loader": "^1.0.0",
+		"http.server": "git+https://github.com/anzerr/http.server.git",
+		"fs.promisify": "git+https://git@github.com/anzerr/fs.promisify.git",
+		"eslint-config-typescript": "git+https://git@github.com/anzerr/eslint-config-typescript.git",
+		"ts-loader": "^6.0.4",
+		"ts-node": "^8.3.0",
+		"typescript": "^3.5.3",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.2"
+	},
+	"dependencies": {
+		"inject.ts": "git+https://github.com/anzerr/inject.ts.git",
+		"base.util": "git+https://github.com/anzerr/base.util.git",
+		"qr.util": "git+https://github.com/anzerr/qr.util.git",
+		"totp.util": "git+https://github.com/anzerr/totp.util.git",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"remarkable": "^2.0.0",
+		"semantic-ui-css": "^2.4.1",
+		"semantic-ui-react": "^0.88.0",
+		"type.util": "git+https://git@github.com/anzerr/type.util.git"
+	},
+	"eslintConfig": {
+		"extends": "eslint-config-typescript",
+		"env": {
+			"browser": true,
+			"node": true
+		}
+	}
+}
