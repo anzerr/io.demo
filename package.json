@@ -27,6 +27,7 @@
 		"webpack-cli": "^3.1.2"
 	},
 	"dependencies": {
+		"highlight.js": "^9.15.10",
 		"inject.ts": "git+https://github.com/anzerr/inject.ts.git",
 		"base.util": "git+https://github.com/anzerr/base.util.git",
 		"qr.util": "git+https://github.com/anzerr/qr.util.git",
