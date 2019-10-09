@@ -10,7 +10,7 @@ export default [
 'npm install --save @anzerr/totp.util',
 '```',
 '### `Class type`',
-'``` javascript',
+'``` typescript',
 `class Hotp {
 
 	key: Buffer; // this is the secret key after it has been transformed and padded
@@ -18,11 +18,11 @@ export default [
 	// "key" is the secret that you hash, "hash" is the hash typed used valid values are ['sha1', 'sha256', 'sha512']
 	constructor(key: string, hash?: string);
 
-	// "t" is the number used to hash in totp that is time, "size" is the code size the default is 6
-	get(t: number, size?: number): string
+	// "n" is the number used to hash in totp that is time, "size" is the code size the default is 6
+	get(n: number, size?: number): string
 
 	// "size" is the secret size {sha1: 20, sha256: 32, sha512: 64}
-	static generate(size?: number): Totp;
+	static generate(size?: number): Hotp;
 
 };
 
@@ -33,8 +33,8 @@ class Totp {
 	// "key" is the secret that you hash, "hash" is the hash typed used valid values are ['sha1', 'sha256', 'sha512']
 	constructor(key: string, hash?: string);
 
-	// "t" is a timestamp in seconds it gets divided by 30, "size" by default is 6 it's the size of the output code
-	getTime(t: number, size?: number): string;
+	// "n" the code for a given number, "size" by default is 6 it's the size of the output code
+	getValue(n: number, size?: number): string;
 
 	// "size" is the code size, "next" is how many next codes to generate
 	get(options?: {size?: number, next?: number}): string | string[];
