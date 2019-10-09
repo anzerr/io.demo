@@ -1,5 +1,6 @@
 
 import 'semantic-ui-css/semantic.min.css';
+import './content/style.css';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
