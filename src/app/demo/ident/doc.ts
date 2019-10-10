@@ -14,7 +14,7 @@ export default [
 	'',
 	'### `Class type`',
 	'``` typescript',
-	`Identicon {
+	`class Identicon {
 
 	// "hash" needs to be a min of 15 char
 	constructor(hash: string, option?: {
