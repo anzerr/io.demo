@@ -4,13 +4,17 @@ import './content/style.css';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {app} from './src/util/component';
 import {TotpPage} from '@demo/totp';
+import {IdentPage} from '@demo/ident';
 
 window.addEventListener('load', () => {
-	let page = window.location.href.split('#')[1];
+	const page = window.location.href.split('#')[1];
 	if (page === 'totp') {
 		document.title = 'Totp.util';
-		ReactDOM.render(React.createElement(TotpPage, null), document.getElementById('root'));
+		return ReactDOM.render(React.createElement(TotpPage, null), document.getElementById('root'));
+	}
+	if (page === 'ident') {
+		document.title = 'Ident.icon';
+		return ReactDOM.render(React.createElement(IdentPage, null), document.getElementById('root'));
 	}
 });

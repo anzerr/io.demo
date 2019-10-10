@@ -1,7 +1,7 @@
 
 import {Component} from '@util/component';
 import style from '@util/style';
-import {Grid, Segment, Header, Input, Label, Form, Progress, Icon} from 'semantic-ui-react'
+import {Grid, Segment, Header, Input, Label, Form, Progress, Icon} from 'semantic-ui-react';
 import {Qr} from '@part/qr';
 import {Markdown} from '@part/markdown';
 import {Center} from '@part/center';
@@ -24,8 +24,8 @@ export class TotpPage extends Component {
 
 	componentDidMount(): any {
 		this.setState({time: setInterval(() => {
-			let a = (new Date().getTime()) / 30000, b = a - Math.floor(a);
-			this.setState({tick: b, key: this.state.totp.get()})
+			const a = (new Date().getTime()) / 30000, b = a - Math.floor(a);
+			this.setState({tick: b, key: this.state.totp.get()});
 		}, 100)});
 	}
 
@@ -33,9 +33,9 @@ export class TotpPage extends Component {
 		clearInterval(this.state.time);
 	}
 
-	data() {
+	data(): string {
 		const o = this.state;
-		return `otpauth://totp/${o.name}?secret=${b32.encode(Buffer.from(this.state.totp.key), true)}&issuer=${o.from}`
+		return `otpauth://totp/${o.name}?secret=${b32.encode(Buffer.from(this.state.totp.key), true)}&issuer=${o.from}`;
 	}
 
 	render(): any {
@@ -85,7 +85,7 @@ export class TotpPage extends Component {
 										placeholder: 'secret'
 									}).on('change', (res) => {
 										const totp = new Totp(res.target.value);
-										this.setState({secret: res.target.value, totp: totp, key: totp.get()})
+										this.setState({secret: res.target.value, totp: totp, key: totp.get()});
 									}).c()
 								),
 								r(Form.Field).c(
@@ -110,7 +110,7 @@ export class TotpPage extends Component {
 			r(Grid).set({columns: 2}).c(
 				r(Grid.Row).set({stretched: true}).c(
 					r(Grid.Column).style({textAlign: 'center'}).c(
-						r('a').style(style.click).set({href: 'https://github.com/anzerr/io.demo/blob/master/src/app/demo/totp.ts'}).c(
+						r('a').style(style.click).set({href: 'https://github.com/anzerr/io.demo/blob/master/src/app/demo/totp/index.ts'}).c(
 							r(Icon).set({name: 'github'}).c(),
 							'Page source code'
 						)
