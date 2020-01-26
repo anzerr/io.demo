@@ -4,8 +4,8 @@ import style from '@util/style';
 import {Grid, Segment, Header, Input, Form, Message, Icon, Button} from 'semantic-ui-react';
 import {Markdown} from '@part/markdown';
 import {Center} from '@part/center';
-import key from 'unique.util';
-import Identicon from 'ident.icon';
+import key from '@anzerr/unique.util';
+import Identicon from '@anzerr/ident.icon';
 import doc from './doc';
 
 const placeholder = {display: 'inline-block', width: '200px', height: '200px', background: 'rgb(240, 240, 240)'};

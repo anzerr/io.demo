@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import {Module} from 'inject.ts';
+import {Module} from '@anzerr/inject.ts';
 import {Simple} from './simple';
 import {Main} from './app/index';
 

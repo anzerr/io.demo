@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import is from 'type.util';
+import is from '@anzerr/type.util';
 import util from './util';
 
 export class Simple {

@@ -1,7 +1,7 @@
 
 /* eslint-disable */
-const {Server} = require('http.server'),
-	fs = require('fs.promisify'),
+const {Server} = require('@anzerr/http.server'),
+	fs = require('@anzerr/fs.promisify'),
 	url = require('url'),
 	path = require('path');
 

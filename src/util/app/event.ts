@@ -1,6 +1,6 @@
 
 import 'reflect-metadata';
-import {Injectable} from 'inject.ts';
+import {Injectable} from '@anzerr/inject.ts';
 import * as events from 'events';
 
 @Injectable()

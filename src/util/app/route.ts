@@ -1,7 +1,7 @@
 
 import 'reflect-metadata';
-import {Injectable, Inject} from 'inject.ts';
-import is from 'type.util';
+import {Injectable, Inject} from '@anzerr/inject.ts';
+import is from '@anzerr/type.util';
 import {Store} from './store';
 
 @Injectable()

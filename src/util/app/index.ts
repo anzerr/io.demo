@@ -1,6 +1,6 @@
 
 import 'reflect-metadata';
-import {Injectable, Inject} from 'inject.ts';
+import {Injectable, Inject} from '@anzerr/inject.ts';
 import {Store} from './store';
 import {Event} from './event';
 import {Config} from './config';

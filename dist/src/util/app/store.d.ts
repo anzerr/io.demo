@@ -4,7 +4,8 @@ export declare class Store {
         [key: string]: any;
     };
     constructor();
-    data: any;
+    get data(): any;
+    set data(s: any);
     get(key: any): any;
     set(key: any, data: any): any;
     add(key: any, i: any): any;

@@ -1,6 +1,6 @@
 
 import {Component} from '@util/component';
-import QrHandle from 'qr.util';
+import QrHandle from '@anzerr/qr.util';
 
 export class Qr extends Component {
 

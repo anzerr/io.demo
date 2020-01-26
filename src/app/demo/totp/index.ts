@@ -5,8 +5,8 @@ import {Grid, Segment, Header, Input, Label, Form, Progress, Icon} from 'semanti
 import {Qr} from '@part/qr';
 import {Markdown} from '@part/markdown';
 import {Center} from '@part/center';
-import {b32} from 'base.util';
-import {Totp} from 'totp.util';
+import {b32} from '@anzerr/base.util';
+import {Totp} from '@anzerr/totp.util';
 import doc from './doc';
 
 export class TotpPage extends Component {
